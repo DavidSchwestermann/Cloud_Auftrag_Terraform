@@ -13,6 +13,7 @@ provider "aws" {
 
 resource "aws_vpc" "main" {
   cidr_block           = "10.0.0.0/16"
+  name                 = aws_vpc_ds
   enable_dns_hostnames = true
 }
 
@@ -22,6 +23,7 @@ resource "aws_internet_gateway" "main" {
 
 resource "aws_subnet" "public" {
   vpc_id                  = aws_vpc.main.id
+  name                    = aws_vpc_ds
   cidr_block              = "10.0.0.0/24"
   map_public_ip_on_launch = true
 }
