@@ -13,6 +13,7 @@ provider "aws" {
 
 resource "aws_vpc" "main" {
   cidr_block           = "10.0.0.0/16"
+  name                 = "erstellte_VPC
   enable_dns_hostnames = true
 }
 
@@ -140,6 +141,7 @@ resource "aws_instance" "ec2_instance" {
   instance_type          = "t2.micro"
   ami                    = data.aws_ami.ubuntu_22_04.id
   subnet_id              = aws_subnet.public.id
+  name                   = erstellte_Ec2
   vpc_security_group_ids = [aws_security_group.ec2.id]
 
   lifecycle {
