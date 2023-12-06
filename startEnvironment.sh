@@ -7,9 +7,9 @@ WEB_PUBLIC_IP=$(jq -r '.web_public_ip.value' outputs.json)
 
 #modify the hosts file to add the new public ip of the ec-2 instance
 echo "[ec-2]" > ansible/hosts
-echo "jokesHost   ansible_host=$WEB_PUBLIC_IP   ansible_user=ubuntu" >> ansible/hosts
+echo "mitarbeiterHost   ansible_host=$WEB_PUBLIC_IP   ansible_user=ubuntu" >> ansible/hosts
 
-#modfiy the application.properties which is used by the jokes db
+#modfiy the application.properties which is used by the mitarbeiter db
 
 
 echo "## MariaDB settings

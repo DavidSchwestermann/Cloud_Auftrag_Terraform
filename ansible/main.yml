@@ -76,13 +76,13 @@
     
     - name: Create a systemd service file for the Java application
       ansible.builtin.template:
-        src: ./jokesdb.service  # Path to a template of your service file
-        dest: /etc/systemd/system/jokesdb.service
+        src: ./mitarbeiterdb.service  # Path to a template of your service file
+        dest: /etc/systemd/system/mitarbeiterdb.service
       become: true
 
     - name: Enable and start the Java application service
       ansible.builtin.systemd:
-        name: jokesdb
+        name: mitarbeiterdb
         enabled: yes
         state: started
       become: true

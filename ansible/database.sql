@@ -1,4 +1,3 @@
-
 use mariadb;
 
 DROP TABLE IF EXISTS section;
