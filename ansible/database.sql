@@ -30,5 +30,5 @@ INSERT INTO `Mitarbeiter` (`id`, `section_idfs`, `Name`, `Nachname`, `Alter`) VA
 (1, 1, 'David' , 'Schwestermann' , 19 ),
 (2, 1, 'Luca' , 'Amrein' , 19 ),
 (3, 1, 'Yannic' , 'Erzinger' , 19 ),
-(6, 2, 'Yves' , 'Huber' , 18 ),
+(6, 2, 'Yves' , 'Huber' , 18 );
 
